@@ -1,6 +1,3 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
     <meta charset="utf-8">
 
     <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
@@ -15,22 +12,22 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="format-detection" content="telephone=no" />
     <!-- Android -->
-    <meta name="application-name" content="{{ title }}">
+    <meta name="application-name" content="Voyeur Music">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#000000">
     <!-- iOS -->
-    <meta name="apple-mobile-web-app-title" content="{{ title }}" />
+    <meta name="apple-mobile-web-app-title" content="Voyeur Music" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <!-- Indexed Data -->
-    <title>{{ title }}</title>
+    <title>Voyeur Music</title>
     <meta name="description" content="">
 
     <!-- FB -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="" />
-    <meta property="og:site_name" content="{{ title }}" />
+    <meta property="og:site_name" content="Voyeur Music" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
@@ -40,33 +37,9 @@
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="" />
-    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:title" content="Voyeur Music" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="" />
     <meta name="twitter:image:src" content="" />
 
     <!-- favicon -->
-
-</head>
-<body>
-  <div class="container">
-
-    {{#each collections.albums}}
-    <div class="clearfix">
-      <div class="sm-col sm-col-6">
-        <a href="/{{ this.path }}">
-           <img class="media-object fit" src="{{replace this.data.artwork_url '-large' '-t300x300'}}" alt="album image">
-         </a>
-      </div>
-      <div class="sm-col sm-col-6">
-          <h4 class="media-heading">{{ this.data.title }}</h4>
-          <a href="/{{ this.path }}">Details</a>
-      </div>
-    </div>
-	{{/each}}
-
-  </div>
-
-  <script type="text/javascript" src="bundle.js"></script>
-</body>
-</html>
