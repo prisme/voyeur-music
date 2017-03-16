@@ -4,15 +4,21 @@
   "description": "voyeurmusic.tv",
   "main": "index.js",
   "scripts": {
-    "start": "node sc2json.js && metalsmith",
-    "get": "node sc2json.js",
-    "build": "npm run get && metalsmith && mv build/albums/index.html build/index.html && npm run build:css",
-    "build:css": "postcss --use autoprefixer -b 'last 2 versions' < build/style.css"
+    "dev": "parallelshell 'npm start' 'npm run watch'",
+    "start": "metalsmith && npm run move && cd build && serve",
+    "open": "opener http://localhost:5000",
+    "watch": "npm run watch:js && npm run watch:css",
+    "watch:js": "watchify -p browserify-hmr src/index.js -o build/bundle.js",
+    "watch:css": "postcss src/style.css --use autoprefixer --output build/style.css --watch",
+    "build": "npm run get && npm run build:js && npm run build:css && metalsmith && npm run move",
+    "deploy": "npm run build && cd build && now && cd ..",
+    "move": "mv build/albums/index.html build/index.html",
+    "build:css": "postcss src/style.css --use autoprefixer --no-map --output src/style.css",
+    "build:js": "browserify src/index.js -o src/bundle.js",
+    "get": "node sc2json.js"
   },
   "author": "",
   "dependencies": {
-    "autoprefixer": "^6.7.7",
-    "cssmin": "^0.4.3",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
@@ -21,7 +27,15 @@
     "metalsmith-paths": "^2.1.1",
     "metalsmith-permalinks": "^0.4.1",
     "metalsmith-register-helpers": "^0.2.0",
-    "postcss": "^5.2.16",
     "soundcloud-node-api": "0.0.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "browserify-hmr": "^0.3.5",
+    "now": "^4.9.0",
+    "opener": "^1.4.3",
+    "parallelshell": "^2.0.0",
+    "postcss": "^5.2.16",
+    "serve": "^5.0.3"
   }
 }
