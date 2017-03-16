@@ -12,7 +12,7 @@
     "watch:css": "postcss src/style.css --use autoprefixer --output build/style.css --watch",
     "build": "npm run get && npm run build:js && npm run build:css && metalsmith && npm run move",
     "deploy": "npm run build && cd build && now && cd ..",
-    "move": "mv build/albums/index.html build/index.html",
+    "move": "mv build/voyeur-music/index.html build/index.html && trash build/voyeur-music",
     "build:css": "postcss src/style.css --use autoprefixer --no-map --output src/style.css",
     "build:js": "browserify src/index.js -o src/bundle.js",
     "get": "node sc2json.js"
@@ -36,6 +36,7 @@
     "opener": "^1.4.3",
     "parallelshell": "^2.0.0",
     "postcss": "^5.2.16",
-    "serve": "^5.0.3"
+    "serve": "^5.0.3",
+    "trash": "^4.0.1"
   }
 }
