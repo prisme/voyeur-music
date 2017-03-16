@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "title": "Voyeur Music",
+    "description": ""
+  },
+  "plugins": {
+    "metalsmith-json-to-files": {
+      "source_path": "./json/"
+    },
+    "metalsmith-collections": {
+  	   "albums": {}
+  	},
+    "metalsmith-permalinks": {
+      "pattern": ":title",
+      "relative": false
+    },
+    "metalsmith-register-helpers": {
+      "directory": "./helpers/"
+    },
+    "metalsmith-layouts": {
+      "engine": "handlebars"
+    }
+  }
+}
