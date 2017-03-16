@@ -1,16 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ title }}</title>
 	<link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="container">
-  	<h1>Album Listing</h1>
 
     {{#each collections.albums}}
     <div class="clearfix">
@@ -24,7 +23,7 @@
           <a href="/{{ this.path }}">Details</a>
       </div>
     </div>
-		{{/each}}
+	{{/each}}
 
   </div>
 
