@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="cleartype" content="on">
@@ -52,28 +51,25 @@
     <link rel="manifest" href="favicon/manifest.json">
     <meta name="theme-color" content="#ffffff">
     <link rel="shortcut icon" href="favicon/favicon.ico">
-
-
 </head>
+
 <body>
-  <div class="container">
+    <div class="container">
 
-    {{#each collections.albums}}
-    <div class="clearfix">
-      <div class="sm-col sm-col-6">
-        <a href="/{{ this.path }}">
-           <img class="media-object fit" src="{{replace this.data.artwork_url '-large' '-t300x300'}}" alt="album image">
-         </a>
-      </div>
-      <div class="sm-col sm-col-6">
-          <h4 class="media-heading">{{ this.data.title }}</h4>
-          <a href="/{{ this.path }}">Details</a>
-      </div>
+        {{#each collections.albums}}
+        <div class="flex center p1 white bg-black">
+            <a class="white" href="/{{ this.path }}">
+                <img class="block fit" src="{{replace this.data.artwork_url '-large' '-t300x300'}}" alt="album image">
+
+                <h4 class="media-heading">
+                    {{ this.data.title }}
+                </h4>
+            </a>
+        </div>
+    {{/each}}
+
     </div>
-	{{/each}}
 
-  </div>
-
-  <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>

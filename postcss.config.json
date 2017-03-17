@@ -1,0 +1,11 @@
+{
+    "use": [
+      "postcss-import"
+    ],
+    "input": "src/app.css",
+    "output": "src/main.css",
+    "local-plugins": true,
+    "autoprefixer": {
+      "browsers": "last 2 versions"
+    }
+}
