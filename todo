@@ -4,12 +4,11 @@ index
 
 item
     [x] dynamic player
-    pause button
-    tracks
-        switch
+    [x] pause button
+    [x] tracks
+        [x] switch
         [x] display
 
-splash
-    loader css
+splash / loader css
 
-social metas
+[x] social metas
