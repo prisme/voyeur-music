@@ -58,12 +58,12 @@
 
         <div class="media-player">
             <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image" >
-            <button class="btn btn-playpause paused">
+            <button class="btn btn-playpause paused" style="background-image: url({{replace this.data.artwork_url '-large' '-t500x500'}})">
                 <img class="play" src="https://icon.now.sh/play/64/ffffff">
                 <img class="pause" src="https://icon.now.sh/pause/64/ffffff">
             </button>
         </div>
-		<h5 class="title center gray ep-title">{{ data.title }}</h5>
+		<h5 class="title left-align p1 gray ep-title">{{ data.title }}</h5>
 
         <ol class="ep-tracks list-reset">
         {{#each data.tracks}}
