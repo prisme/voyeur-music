@@ -109,6 +109,10 @@ body{
     padding: 0.7em 1.5em;
 }
 
+.player .ep-track.active{
+    color: gray;
+}
+
 .media-player{
     position: relative;
 }
@@ -133,7 +137,10 @@ body{
     z-index: 1;
     background-position: 50% 50%;
     background-size: calc(100vw - var(--space-2));
-    box-shadow: inset 0px 0px 15px 2px rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 20px 2px rgb(255, 255, 255);
+
+    opacity: 0;
+    transition: opacity 1.2s ease-out;
 }
 
 .btn-playpause:before{
@@ -153,6 +160,10 @@ body{
     display: inline-block;
     margin-left: 8px;
     margin-top: 3px;
+}
+
+.btn-playpause.playing .pause{
+    opacity: 0.7;
 }
 
 .btn-playpause.paused .pause,
