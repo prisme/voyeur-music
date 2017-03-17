@@ -6,10 +6,8 @@ item
     pause button
     dynamic player
     tracks
-        display
+        [x] display
         switch
 
 splash
     loader css
-        real img loader ?
-

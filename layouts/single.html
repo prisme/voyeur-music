@@ -58,6 +58,12 @@
         <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image" >
 		<h5 class="title center gray">{{ data.title }}</h5>
 
+        <ol class="ep-tracks list-reset">
+        {{#each data.tracks}}
+            <li rel="{{uri}}" class="ep-track gray">{{title}}</li>
+        {{/each}}
+        </ol>
+
         <a class="btn btn-primary mb1 bg-black soundcloud" href="{{data.permalink_url}}" target="_blank"><span>soundcloud</span></a>
 
         <a class="btn btn-primary mb1 bg-black beatport" href="{{data.purchase_url}}" target="_blank"><span>beatport</span></a>
