@@ -3,8 +3,8 @@ index
     header
 
 item
-    pause button
     dynamic player
+    pause button
     tracks
         [x] display
         switch

@@ -73,16 +73,18 @@ body{
 }
 
 .container{
-    padding: 1em;
+    padding: var(--space-2);
 }
 
 .ep a{
     text-decoration: none;
 }
-.ep-title{
+.list .ep-title{
     max-width: 500px;
     margin: 1.5em auto 3em;
     font-weight: normal;
+}
+.ep-title{
     letter-spacing: 0.1em;
     line-height: 1.3em;
 }
@@ -90,7 +92,7 @@ body{
 
 .player .ep-tracks{
     margin: 2em auto;
-    width: 500px;
+    max-width: 500px;
 }
 
 .player .ep-track{
@@ -102,5 +104,4 @@ body{
     max-width: 500px;
     text-align: left;
     padding: 0.4em 1.5em;
-    width: 60%;
 }

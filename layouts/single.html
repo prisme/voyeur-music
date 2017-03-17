@@ -54,9 +54,8 @@
 </head>
 <body class="player bg-black white">
 	<div class="container center bg-lighten-2">
-
         <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image" >
-		<h5 class="title center gray">{{ data.title }}</h5>
+		<h5 class="title center gray ep-title">{{ data.title }}</h5>
 
         <ol class="ep-tracks list-reset">
         {{#each data.tracks}}

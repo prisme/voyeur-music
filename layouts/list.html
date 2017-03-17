@@ -54,10 +54,10 @@
 </head>
 
 <body class="list bg-black">
-    <div class="container">
+    <div class="container bg-lighten-2 white">
 
         {{#each collections.albums}}
-        <div class="center p1 white bg-black ep">
+        <div class="center ep">
             <a class="white block relative" href="/{{ this.path }}">
                 <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image">
 
