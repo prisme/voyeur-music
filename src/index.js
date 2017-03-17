@@ -30,7 +30,6 @@ if (document.querySelector('.player') != null) {
     }
 
     var skipTrack = function(ev){
-        activeTrack = index
         scPlayer.play({playlistIndex: activeTrack})
 
         btnTrackArr.forEach(function(element){ element.classList.remove('active') })
@@ -50,7 +49,10 @@ if (document.querySelector('.player') != null) {
         // bind track-list
         btnTrackArr.forEach(function(element, index){
             var mc = new Hammer(element)
-            mc.on("tap press", skipTrack)
+            mc.on("tap press", function(ev){
+                activeTrack = index
+                skipTrack(ev)
+            })
         })
 
         // bind end-track / play-all
