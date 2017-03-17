@@ -4,12 +4,15 @@
     "description": ""
   },
   "plugins": {
+    "metalsmith-metadata": {
+      "global": "metadata.json"
+    },
     "metalsmith-json-to-files": {
       "source_path": "./json/"
     },
     "metalsmith-collections": {
-  	   "albums": {}
-  	},
+       "albums": {}
+    },
     "metalsmith-permalinks": {
       "pattern": ":title",
       "relative": false
