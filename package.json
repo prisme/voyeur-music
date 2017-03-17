@@ -21,6 +21,7 @@
   "author": "",
   "dependencies": {
     "basscss": "^8.0.3",
+    "hammerjs": "^2.0.8",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
