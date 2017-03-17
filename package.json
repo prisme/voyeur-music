@@ -4,8 +4,9 @@
   "description": "voyeurmusic.tv",
   "main": "index.js",
   "scripts": {
-    "dev": "parallelshell 'npm run build' 'npm start' 'npm run watch'",
-    "start": "cd build && serve",
+    "start": "node app.js",
+    "dev": "parallelshell 'npm run build' 'npm serve' 'npm run watch'",
+    "serve": "cd build && serve",
     "watch": "parallelshell 'npm run watch:js' 'npm run watch:css'",
     "watch:js": "watchify -p browserify-hmr src/index.js -o build/bundle.js",
     "watch:css": "postcss -c postcss.dev.json -w",
@@ -28,6 +29,7 @@
     "metalsmith-paths": "^2.1.1",
     "metalsmith-permalinks": "^0.4.1",
     "metalsmith-register-helpers": "^0.2.0",
+    "node-static": "^0.7.9",
     "normalize.css": "^5.0.0",
     "soundcloud-audio": "^1.1.0",
     "soundcloud-node-api": "0.0.9"
