@@ -25,6 +25,7 @@ body{
     margin: auto;
     display: block;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .soundcloud span,
@@ -86,7 +87,10 @@ body{
     margin: 1.5em auto 3em;
     font-weight: normal;
 }
-.ep-title{
+.player .ep-title{
+    max-width: 500px;
+    margin: auto;
+    box-sizing: border-box;
     letter-spacing: 0.1em;
     line-height: 1.6em;
     margin-bottom: .5em;
@@ -115,6 +119,8 @@ body{
 
 .media-player{
     position: relative;
+    max-width: 500px;
+    margin: auto;
 }
 
 .btn:focus{
@@ -136,7 +142,12 @@ body{
     transform: translate(-50%,-50%);
     z-index: 1;
     background-position: 50% 50%;
-    background-size: calc(100vw - var(--space-2));
+
+    background-size: calc(500px - var(--space-2));
+    @media only screen and (max-width : 500px) {
+        background-size: calc(100vw - var(--space-2));
+    }
+
     // box-shadow: inset 0px 0px 10px 2px rgb(255, 255, 255);
     overflow: hidden;
 

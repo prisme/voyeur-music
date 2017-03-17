@@ -1507,6 +1507,8 @@ body{
     max-width: 500px;
     margin: 1.5em auto 3em;
     font-weight: normal;
+    margin: auto;
+    box-sizing: border-box;
 }
 
 .ep-title{
