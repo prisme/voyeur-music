@@ -53,21 +53,24 @@
     <link rel="shortcut icon" href="favicon/favicon.ico">
 </head>
 
-<body>
+<body class="list bg-black">
     <div class="container">
 
         {{#each collections.albums}}
-        <div class="flex center p1 white bg-black">
-            <a class="white" href="/{{ this.path }}">
-                <img class="block fit" src="{{replace this.data.artwork_url '-large' '-t300x300'}}" alt="album image">
+        <div class="center p1 white bg-black ep">
+            <a class="white block relative" href="/{{ this.path }}">
+                <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image">
 
-                <h4 class="media-heading">
+                <h4 class="ep-title">
                     {{ this.data.title }}
                 </h4>
             </a>
         </div>
-    {{/each}}
+        {{/each}}
 
+        <div class="about"></div>
+        <div class="social"></div>
+        <div class="contact"></div>
     </div>
 
     <script type="text/javascript" src="bundle.js"></script>

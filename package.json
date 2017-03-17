@@ -6,14 +6,13 @@
   "scripts": {
     "dev": "parallelshell 'npm run build' 'npm start' 'npm run watch'",
     "start": "cd build && serve",
-    "watch": "parallelshell 'npm run watch:js' 'npm run watch:css' 'npm run watch:html'",
+    "watch": "parallelshell 'npm run watch:js' 'npm run watch:css'",
     "watch:js": "watchify -p browserify-hmr src/index.js -o build/bundle.js",
     "watch:css": "postcss -c postcss.dev.json -w",
     "deploy": "npm run build && cd build && now && cd ..",
     "build": "npm run get && npm run build:js && npm run build:css && npm run build:html",
     "move": "mv build/voyeur-music/index.html build/index.html && trash build/voyeur-music && trash build/index.js && trash build/app.css",
     "build:html": "metalsmith && npm run move",
-    "watch:html": "npm run build:html",
     "build:js": "browserify src/index.js -o src/bundle.js",
     "build:css": "postcss -c postcss.config.json",
     "get": "node sc2json.js"

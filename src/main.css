@@ -1423,7 +1423,6 @@ template {
 .muted { opacity: .5 }
 
 body{
-    background-color: black;
     min-height: 100%;
 }
 
@@ -1439,7 +1438,7 @@ body{
 .beatport{
     padding-left: 2.5em;
     border-radius: 20px;
-    width: 70%;
+    width: 80%;
     margin: auto;
     display: block;
     text-align: center;
@@ -1495,4 +1494,12 @@ body{
 
 .container{
     padding: 1em;
+}
+
+.ep a{
+    text-decoration: none;
+}
+
+.ep-title{
+    text-decoration: none;
 }
