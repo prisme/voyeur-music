@@ -38,7 +38,7 @@
 
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="{{permalink}}" />
+    <meta name="twitter:site" content="{{global.permalink}}" />
     <meta name="twitter:title" content="{{ title }}" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="{{ global.img_share }}" />
@@ -54,7 +54,14 @@
 </head>
 <body class="player bg-black white">
 	<div class="container center bg-lighten-2">
-        <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image" >
+
+        <div class="media-player">
+            <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image" >
+            <button class="btn btn-playpause paused">
+                <img class="play" src="https://icon.now.sh/play/64/ffffff">
+                <img class="pause" src="https://icon.now.sh/pause/64/ffffff">
+            </button>
+        </div>
 		<h5 class="title center gray ep-title">{{ data.title }}</h5>
 
         <ol class="ep-tracks list-reset">

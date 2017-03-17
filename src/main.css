@@ -1527,3 +1527,33 @@ body{
     text-align: left;
     padding: 0.4em 1.5em;
 }
+
+.media-player{
+    position: relative;
+}
+
+.btn-playpause{
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    background: rgba(255,255,255,0.6);
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.btn-playpause .pause,
+.btn-playpause .play{
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+.btn-playpause.paused .pause,
+.btn-playpause.playing .play{
+    display: none;
+}
