@@ -2913,9 +2913,11 @@ if (document.querySelector('.player') != null) {
 
         // bind track-list
         btnTrackArr.forEach(function(element, index){
-            activeTrack = index
             var mc = new Hammer(element)
-            mc.on("tap press", skipTrack)
+            mc.on("tap press", function(ev){
+                activeTrack = index
+                skipTrack(ev)
+            })
         })
 
         // bind end-track / play-all
