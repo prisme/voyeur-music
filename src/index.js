@@ -2,7 +2,9 @@ var SoundCloudAudio = require('soundcloud-audio');
 var scPlayer = new SoundCloudAudio('a513ea843cd798d72b39eeb91cad08a1');
 
 if (document.querySelector('.player') != null) {
-    scPlayer.resolve('http://soundcloud.com/voyeurmusic/sets/vm017', function (playlist) {
+    var ep_url = document.querySelector('.btn-primary.soundcloud').href
+
+    scPlayer.resolve(ep_url, function (playlist) {
         console.log(playlist);
 
         // once playlist is loaded it can be played
@@ -14,7 +16,7 @@ if (document.querySelector('.player') != null) {
             scPlayer.next();
         });
 
-        setTimeout(function(){scPlayer.pause()}, 7777)
+        // setTimeout(function(){scPlayer.pause()}, 7777)
 
         // play specific track from playlist by it's index
         // scPlayer.play({playlistIndex: 2});

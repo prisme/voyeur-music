@@ -222,6 +222,9 @@ var SoundCloudAudio = require('soundcloud-audio');
 var scPlayer = new SoundCloudAudio('a513ea843cd798d72b39eeb91cad08a1');
 
 if (document.querySelector('.player') != null) {
+    var ep = document.querySelector('.btn-primary.soundcloud').href
+    console.log(ep)
+
     scPlayer.resolve('http://soundcloud.com/voyeurmusic/sets/vm017', function (playlist) {
         console.log(playlist);
 

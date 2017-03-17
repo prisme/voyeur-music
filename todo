@@ -3,11 +3,13 @@ index
     header
 
 item
-    dynamic player
+    [x] dynamic player
     pause button
     tracks
-        [x] display
         switch
+        [x] display
 
 splash
     loader css
+
+social metas
