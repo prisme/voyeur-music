@@ -2,7 +2,7 @@
   "name": "voyeur-music",
   "version": "1.0.0",
   "description": "voyeurmusic.tv",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "parallelshell 'npm run build' 'npm serve' 'npm run watch'",
