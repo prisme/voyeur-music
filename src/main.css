@@ -1501,5 +1501,9 @@ body{
 }
 
 .ep-title{
-    text-decoration: none;
+    max-width: 500px;
+    margin: 1.5em auto 3em;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    line-height: 1.3em;
 }
