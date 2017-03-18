@@ -62,7 +62,7 @@
     <div class="container bg-lighten-2 white">
 
         {{#each collections.albums}}
-        <div class="center ep">
+        <div class="ep">
             <a class="white inline-block relative" href="/{{ this.path }}">
                 <img class="fit" src="{{replace this.data.artwork_url '-large' '-t500x500'}}" alt="album image">
 
@@ -73,9 +73,34 @@
         </div>
         {{/each}}
 
-        <div class="about"></div>
-        <div class="social"></div>
-        <div class="contact"></div>
+        <div class="about">
+            <h4 class="h5">about voyeur music</h4>
+            <p class="h6 gray">
+                In the beginning, there was jack, and jack had a groove, and from this groove came the groove of all grooves. And while one day viciously throwing down on his box, jack boldly declared, let there be house.
+                <br><br>
+                And house music was born.
+            </p>
+        </div>
+
+        <div class="social">
+            <a class="btn btn-primary mb1 bg-black soundcloud" href="https://soundcloud.com/voyeurmusic/" target="_blank"><span>soundcloud</span></a>
+
+            <a class="btn btn-primary mb1 bg-black facebook" href="https://facebook.com/voyeurmusicofficial/" target="_blank"><span>facebook</span></a>
+
+            <a class="btn btn-primary mb1 bg-black beatport" href="https://www.beatport.com/label/voyeur/46532" target="_blank"><span>beatport</span></a>
+        </div>
+
+        <div class="contact">
+            <h4 class="h5">music demos</h4>
+            <p class="h6 gray">
+                Feel you can be a part of it ? <br>
+                All demos must be sent privately to <a href="mailto:demos@voyeurmusic.co.uk" class="silver">demos@voyeurmusic.co.uk</a>
+                <br><br>
+                <small>Every production must come with contact details</small>
+            </p>
+        </div>
+
+        <!-- <footer>All contents are exclusively owned by Voyeur Music LTD</footer> -->
     </div>
 
     <script type="text/javascript" src="bundle.js"></script>

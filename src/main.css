@@ -1436,28 +1436,95 @@ body{
 
 .bg-lighten-4 { background-color: hsla(0,0%,100%,.5) }
 
+.container{
+    padding: var(--space-2);
+}
+
+.list .container > div:first-child,
+.player .container .media-player {
+    margin-top: 42px;
+}
+
+.main-header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: #232323;
+    height: 42px;
+}
+
 .main-header .logo{
-    background: url(img/Icon@2x.png) no-repeat;
-    width: 120px; height: 120px;
+    background: url(img/icon@2x.png) no-repeat;
+    border-radius: 50%;
+    width: 18vw;
+    height: 18vw;
+    max-width: 120px;
+    max-height: 120px;
     overflow: hidden;
     text-indent: -200px;
+    display: block;
+    background-size: 120%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-position: 40% 30%;
+}
+
+.social{
+    margin: 2em 0;
+}
+
+.contact{
+    margin-bottom: 5em;
+}
+
+.contact h4,
+.about h4{
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.contact p,
+.about p{
+    line-height: 1.6em;
+}
+
+.list .ep h4{
+    font-size: .8em;
 }
 
 .soundcloud,
+.facebook,
 .beatport{
     padding-left: 2.5em;
-    border-radius: 20px;
+    border-radius: 25px;
     width: 80%;
     max-width: 500px;
     margin: auto;
     display: block;
     text-align: center;
     box-sizing: border-box;
+    padding: 13px var(--button-padding-x);
 }
 
+.facebook span,
 .soundcloud span,
 .beatport span{
     position: relative;
+}
+
+.facebook span:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: -50px;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://icon.now.sh/facebook/32/ffffff);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-size: 70%;
 }
 
 .soundcloud span:before{
@@ -1499,12 +1566,9 @@ body{
     margin: auto;
 }
 
+.social .btn-primary,
 .player .btn-primary{
     margin: 1em auto;
-}
-
-.container{
-    padding: var(--space-2);
 }
 
 .ep a{
@@ -1513,7 +1577,7 @@ body{
 
 .list .ep-title{
     max-width: 500px;
-    margin: 1em auto 3em;
+    margin: 0.5em auto 3em;
     font-weight: normal;
     line-height: 1.6em;
 }
