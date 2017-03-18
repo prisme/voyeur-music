@@ -16,6 +16,37 @@ body{
 .bg-lighten-3 { background-color: hsla(0,0%,100%,.25) }
 .bg-lighten-4 { background-color: hsla(0,0%,100%,.5) }
 
+.list .container > div:first-child,
+.player .container .media-player {
+    margin-top: 42px;
+}
+
+.main-header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: #232323;
+    height: 42px;
+}
+
+.main-header .logo{
+    background: url(img/icon@2x.png) no-repeat;
+    border-radius: 50%;
+    width: 18vw;
+    height: 18vw;
+    max-width: 120px;
+    max-height: 120px;
+    overflow: hidden;
+    text-indent: -200px;
+    display: block;
+    background-size: 120%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-position: 40% 30%;
+}
+
+
 .soundcloud,
 .beatport{
     padding-left: 2.5em;
@@ -84,8 +115,9 @@ body{
 }
 .list .ep-title{
     max-width: 500px;
-    margin: 1.5em auto 3em;
+    margin: 1em auto 3em;
     font-weight: normal;
+    line-height: 1.6em;
 }
 .player .ep-title{
     max-width: 500px;
