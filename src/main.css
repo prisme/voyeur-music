@@ -1438,9 +1438,10 @@ body{
 
 .container{
     padding: var(--space-2);
-    background-image:url(https://media.giphy.com/media/3o7bucFccSd85ptOjm/giphy.gif);
+
+    /*background-image:url(https://media.giphy.com/media/3o7bucFccSd85ptOjm/giphy.gif);
     background-repeat: repeat-y;
-    background-size: 100% auto;
+    background-size: 100% auto;*/
 }
 
 .list .container > div:first-child,
@@ -1609,6 +1610,7 @@ body{
 }
 
 .player .ep-track{
+    position: relative;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1621,7 +1623,18 @@ body{
 }
 
 .player .ep-track.active{
-    color: var(--gray);
+    color: var(--white);
+
+}
+
+.player .ep-track.active:before{
+    content: '';
+    display: block;
+    background-image: url( https://icon.now.sh/play_arrow/ffffff);
+    background-size: 100% auto;
+    width: 10px; height: 10px;
+    left: -10px;
+    top: 3px;
 }
 
 .media-player{

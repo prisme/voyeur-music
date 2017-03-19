@@ -71,13 +71,13 @@
 
         <ol class="ep-tracks list-reset">
         {{#each data.tracks}}
-            <li class="ep-track silver">{{title}}</li>
+            <li class="ep-track gray">{{title}}</li>
         {{/each}}
         </ol>
 
-        <a class="btn btn-primary mb1 bg-black soundcloud" href="{{data.permalink_url}}" target="_blank"><span>soundcloud</span></a>
+        <a class="btn btn-primary mb1 bg-black beatport" href="{{data.purchase_url}}" target="_blank"><span>buy on beatport</span></a>
 
-        <a class="btn btn-primary mb1 bg-black beatport" href="{{data.purchase_url}}" target="_blank"><span>beatport</span></a>
+        <a class="btn btn-primary mb1 bg-black soundcloud" href="{{data.permalink_url}}" target="_blank"><span>learn more</span></a>
 	</div>
 
     <script type="text/javascript" src="../../bundle.js"></script>
