@@ -1614,10 +1614,13 @@ body{
     max-width: 500px;
     text-align: left;
     padding: 0.7em 1.5em;
+    cursor: pointer;
 }
 
+.player .ep-track
+
 .player .ep-track.active{
-    color: gray;
+    color: var(--silver);
 }
 
 .media-player{
