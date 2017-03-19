@@ -3,7 +3,7 @@
       "postcss-import"
     ],
     "input": "src/app.css",
-    "output": "build/main.css",
+    "output": "docs/main.css",
     "local-plugins": true,
     "autoprefixer": {
       "browsers": "last 2 versions"

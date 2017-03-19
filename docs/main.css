@@ -1617,10 +1617,8 @@ body{
     cursor: pointer;
 }
 
-.player .ep-track
-
 .player .ep-track.active{
-    color: var(--silver);
+    color: var(--gray);
 }
 
 .media-player{
