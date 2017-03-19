@@ -12,7 +12,7 @@
     "watch:css": "postcss -c postcss.dev.json -w",
     "deploy": "npm run build && cd build && now && cd ..",
     "build": "npm run get && npm run build:js && npm run build:css && npm run build:html",
-    "move": "mv build/voyeur-music/index.html build/index.html && trash build/voyeur-music && trash build/index.js && trash build/app.css",
+    "move": "mv build/voyeur-music/index.html build/index.html && trash build/voyeur-music && trash build/index.js && trash build/app.css && mv build docs",
     "build:html": "metalsmith && npm run move",
     "build:js": "browserify src/index.js -o src/bundle.js",
     "build:css": "postcss -c postcss.config.json",
@@ -47,6 +47,7 @@
     "parallelshell": "^2.0.0",
     "postcss": "^5.2.16",
     "postcss-import": "^9.1.0",
+    "renamer": "^0.6.1",
     "serve": "^5.0.3",
     "trash": "^4.0.1"
   }
