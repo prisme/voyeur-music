@@ -1438,6 +1438,7 @@ body{
 
 .container{
     padding: var(--space-2);
+    background-color: #232323;
 
     /*background-image:url(https://media.giphy.com/media/3o7bucFccSd85ptOjm/giphy.gif);
     background-repeat: repeat-y;
@@ -1453,7 +1454,7 @@ body{
     position: fixed;
     width: 100%;
     z-index: 2;
-    background: #232323;
+    background: #030303;
     height: 42px;
 }
 
@@ -1467,7 +1468,7 @@ body{
     overflow: hidden;
     text-indent: -200px;
     display: block;
-    background-size: 120%;
+    background-size: 110%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
