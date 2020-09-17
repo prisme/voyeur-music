@@ -48,7 +48,7 @@
     "postcss": "^5.2.16",
     "postcss-import": "^9.1.0",
     "renamer": "^0.6.1",
-    "serve": "^5.0.3",
+    "serve": "^11.3.2",
     "trash": "^4.0.1"
   }
 }
